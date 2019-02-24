@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/calculator.css">
+    <script src="JS/calculator.js"></script>
+    <script src="JS/jquery-3.3.1.js"></script>
+</head>
+<body>
+<main>
+    <div class="container">
+        <h2>the magnificent Calculator</h2>
+        <div class="calculator-container">
+            <form id="text" name="form">
+                <input id="area" name="textView">
+            </form>
+            <div>
+                <button class="operation-class" onclick="insertToText('+')">+</button>
+            </div>
+            <div>
+                <button class="operation-class" onclick="insertToText('-')">-</button>
+            </div>
+            <div>
+                <button class="operation-class" onclick="insertToText('*')">x</button>
+            </div>
+            <div>
+                <button class="operation-class" onclick="insertToText('/')">/</button>
+            </div>
+            <div>
+                <button class="number-button" value="1" onclick="insertToText(1)">1</button>
+            </div>
+            <div>
+                <button class="number-button" value="2" onclick="insertToText(2)">2</button>
+            </div>
+            <div>
+                <button class="number-button" value="3" onclick="insertToText(3)">3</button>
+            </div>
+            <div id="equal">
+                <button onclick="calculate()">=</button>
+            </div>
+            <div>
+                <button class="number-button" value="4" onclick="insertToText(4)">4</button>
+            </div>
+            <div>
+                <button class="number-button" value="5" onclick="insertToText(5)">5</button>
+            </div>
+            <div>
+                <button class="number-button" value="6" onclick="insertToText(6)">6</button>
+            </div>
+            <div>
+                <button class="number-button" value="7" onclick="insertToText(7)">7</button>
+            </div>
+            <div>
+                <button class="number-button" value="8" onclick="insertToText(8)">8</button>
+            </div>
+            <div>
+                <button class="number-button" value="9" onclick="insertToText(9)">9</button>
+            </div>
+            <div>
+                <button id="clear-button" onclick="clearArea()">c</button>
+            </div>
+            <div>
+                <button class="number-button" onclick="insertToText(0)">0</button>
+            </div>
+            <div>
+                <button class="number-button" onclick="deleteNumber()"><</button>
+            </div>
+            <div id="show-history">
+                <button onclick="fade()">Show History</button>
+            </div>
+        </div>
+        <div class="history" hidden>
+            <div class="history-area">
+                <h3>Results History</h3>
+                <form name="history" id="history-form">
+                    <textarea id="history-text" name="textView"></textarea>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
